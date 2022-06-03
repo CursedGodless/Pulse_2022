@@ -5,6 +5,7 @@
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		margin-top: 60px;
 	}
 	&__item {

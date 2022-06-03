@@ -1,0 +1,79 @@
+@media screen and (max-width: 991.98px) {
+	.container {
+		padding: 0 20px;
+	}
+	.advantages {
+		&__wrapper {
+			justify-content: space-evenly;
+		}
+	}
+}
+@media screen and (max-width: 767.98px) {
+	.title_white {
+		font-size: 32px;
+		line-height: 41px;
+	}
+	.header {
+		&__official {
+			display: none;
+		}
+	}
+	.consultation {
+		padding: 70px 0 68px;
+		min-height: 600px;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+	.title {
+		font-size: 27px;
+	}
+	.header {
+		&__contacts {
+			display: none;
+		}
+	}
+	.promo {
+		padding: 21px 0 33px;
+		&__wrapper {
+			margin-top: 45px;
+		}
+		&__title {
+			font-size: 35px;
+			text-align: right;
+		}
+		&__subtitle {
+			margin-top: 10px;
+			text-transform: uppercase;
+			text-align: right;
+		}
+		&__items {
+			justify-content: space-evenly;
+			align-self: center;
+			width: 80%;
+			flex-wrap: wrap;
+		}
+		&__item:nth-child(3) {
+			margin-top: 15px;
+		}
+	}
+	.btn_big {
+		width: 280px;
+	}
+	.advantages {
+		padding-top: 45px;
+		&__wrapper {
+			margin-top: 30px;
+		}
+		&__item-title {
+			margin-bottom: 10px;
+		}
+	}
+	.form {
+		width: 280px;
+		align-self: center;
+		&__input {
+			width: 100%;
+		}
+	}
+}
