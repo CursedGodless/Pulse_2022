@@ -34,11 +34,15 @@ const paths = {
 	html: {
 		src: 'src/*.html',
 		dest: 'dist/'
+	},
+	fonts: {
+		src: 'src/fonts/*',
+		dest: 'dist/fonts'
 	}
 };
 
 function clean() {
-	return del(['dist/*', '!dist/img','!dist/icons']);
+	return del(['dist/*', '!dist/img', '!dist/icons']);
 }
 
 // Минификация, префиксы, карты
@@ -102,6 +106,11 @@ function html() {
 		.pipe(browserSync.stream());
 }
 
+function fonts() {
+	return gulp.src(paths.fonts.src)
+		.pipe(gulp.dest(paths.fonts.dest));
+}
+
 function watch() {
 	browserSync.init({
 		server: {
@@ -111,16 +120,18 @@ function watch() {
 	gulp.watch(paths.html.src).on('change', browserSync.reload);
 	gulp.watch(paths.html.src, html);
 	gulp.watch(paths.images.src, img);
+	gulp.watch(paths.fonts.src, fonts);
 	gulp.watch(paths.icons.src, icons);
 	gulp.watch(paths.styles.src, styles);
 	gulp.watch(paths.scripts.src, scripts);
 }
 
-const build = gulp.series(clean, html, gulp.parallel(styles, scripts, img, icons), watch); // Последовательное выполнение задач, внутри параллельное
+const build = gulp.series(clean, html, gulp.parallel(styles, scripts, img, icons, fonts), watch); // Последовательное выполнение задач, внутри параллельное
 
 exports.html = html;
 exports.img = img;
 exports.icons = icons;
+exports.fonts = fonts;
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
