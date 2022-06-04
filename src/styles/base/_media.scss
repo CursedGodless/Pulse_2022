@@ -7,6 +7,14 @@
 			justify-content: space-evenly;
 		}
 	}
+	.slider {
+		&__wrapper {
+			width: 700px;
+			img {
+				width: 100%;
+			}
+		}
+	}
 }
 @media screen and (max-width: 767.98px) {
 	.title_white {
@@ -21,6 +29,13 @@
 	.consultation {
 		padding: 70px 0 68px;
 		min-height: 600px;
+	}
+	.slider {
+		min-height: 500px;
+		padding: 50px 0;
+		&__wrapper {
+			width: 80%;
+		}
 	}
 }
 
@@ -74,6 +89,13 @@
 		align-self: center;
 		&__input {
 			width: 100%;
+		}
+	}
+	.slider {
+		min-height: 290px;
+    padding: 30px 0;
+		&__wrapper {
+			width: 90%
 		}
 	}
 }

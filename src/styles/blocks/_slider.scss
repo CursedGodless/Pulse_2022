@@ -1,0 +1,47 @@
+.slider {
+	min-height: 742px;
+	padding: 61px 0 81px;
+	&__wrapper {
+		margin: 0 auto;
+		width: 750px;
+		position: relative;
+	}
+	.slick {
+		&-arrow {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			border: none;
+			background: transparent;
+		}
+		&-prev {
+			left: -97px;
+		}
+		&-next {
+			right: -97px;
+		}
+		&-dots {
+			display: flex;
+			justify-content: space-between;
+			width: 200px;
+			margin: 0 auto;
+			list-style: none;
+			margin-top: 15px;
+			padding-left: 0;
+			li {
+				font-size: 0;
+				button {
+					border-radius: 50%;
+					border: 1px solid black;
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+		&-active {
+			button {
+				background: gray;
+			}
+		}
+	}
+}

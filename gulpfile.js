@@ -8,7 +8,6 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
-const del = require('del');
 const htmlmin = require('gulp-htmlmin');
 const newer = require('gulp-newer');
 const browserSync = require('browser-sync');
@@ -40,11 +39,6 @@ const paths = {
 		dest: 'dist/fonts'
 	}
 };
-
-function clean() {
-	return del(['dist/*', '!dist/img', '!dist/icons']);
-}
-
 // Минификация, префиксы, карты
 function styles() {
 	return gulp.src(paths.styles.src)
@@ -126,13 +120,12 @@ function watch() {
 	gulp.watch(paths.scripts.src, scripts);
 }
 
-const build = gulp.series(clean, html, gulp.parallel(styles, scripts, img, icons, fonts), watch); // Последовательное выполнение задач, внутри параллельное
+const build = gulp.series( html, gulp.parallel(styles, scripts, img, icons, fonts), watch); // Последовательное выполнение задач, внутри параллельное
 
 exports.html = html;
 exports.img = img;
 exports.icons = icons;
 exports.fonts = fonts;
-exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watch = watch;
