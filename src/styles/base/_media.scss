@@ -20,6 +20,31 @@
 			margin-top: 20px;
 		}
 	}
+	.footer {
+		&__info {
+			bottom: -95px;
+			top: unset;
+			width: 100%;
+			min-height: 100px;
+			padding: 15px 0;
+			display: flex;
+			align-items: center;
+			&>div {
+				width: 50%;
+			}
+			&-phone {
+				margin-top: 15px;
+			}
+		}
+		&__social {
+			padding-right: 50px;
+			margin-top: 0;
+			justify-content: flex-end;
+			&-item:nth-child(2) {
+				margin: 0 30px;
+			}
+		}
+	}
 }
 @media screen and (max-width: 767.98px) {
 	.title_white {
@@ -67,6 +92,20 @@
 				margin: 0 auto;
 				margin-bottom: 15px;
 			}
+		}
+	}
+	.footer {
+		&__info {
+			flex-direction: column;
+			bottom: -145px;
+			&>div {
+				width: 100%;
+			}
+		}
+		&__social {
+			margin-top: 15px;
+			padding-right: 0;
+			justify-content: center;
 		}
 	}
 }
