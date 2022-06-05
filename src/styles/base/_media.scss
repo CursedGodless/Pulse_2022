@@ -57,6 +57,18 @@
 			margin-top: 20px;
 		}
 	}
+	.feedback {
+		&__item {
+			flex-direction: column;
+			&-text {
+				text-align: center;
+			}
+			&-img {
+				margin: 0 auto;
+				margin-bottom: 15px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 575.98px) {

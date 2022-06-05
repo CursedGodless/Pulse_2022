@@ -1,0 +1,46 @@
+.feedback {
+	padding-bottom: 26px;
+	&__wrapper {
+		max-width: 860px;
+		margin: 0 auto;
+		margin-top: 60px;
+	}
+	&__item {
+		display: flex;
+		&:nth-child(n+2) {
+			margin-top: 60px;
+		}
+		&-img {
+			width: 169px;
+			height: 169px;
+			display: block;
+			margin-right: 55px;
+		}
+		&-text {
+			max-width: 680px;
+		}
+		&-name {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 18px;
+			color: $text-color;
+		}
+		&-marathon {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 22px;
+			color: #646464;
+		}
+		&-descr {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 24px;
+			color: $text-color;
+
+			margin-top: 10px;
+			&>p:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
