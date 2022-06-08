@@ -92,3 +92,35 @@ catalog.addEventListener('click', (e) => {
 		document.querySelector('#order .modal__subtitle').textContent = `${target.closest('.catalog__item').querySelector('.catalog__item-name').textContent}`;
 	}
 })
+
+function setProp() {
+	return {
+		rules: {
+			name:
+			{
+				required: true,
+				minlength: 2
+			},
+			phone: 'required',
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			name: {
+				required: "Пожалуйста укажите ваше имя",
+				minlength: jQuery.validator.format("Минимум {0} символов!")
+			},
+			phone: "Пожалуйста укажите ваш номер телефона",
+			email: {
+				required: "Нам необходим  ваш e-mail для связи",
+				email: "Ваш e-mail адрес должен быть следующего формата name@domain.com"
+			}
+		}
+	}
+}
+
+$('.consultation__form').validate(setProp());
+$('#consultation form').validate(setProp());
+$('#order form').validate(setProp());

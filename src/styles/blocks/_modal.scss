@@ -36,6 +36,17 @@
 	&_active {
 		display: block;
 	}
+	&__message {
+		padding: 0 20px;
+
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 14px;
+		color: inherit;
+		text-align: center;
+
+		margin-top: 10px;
+	}
 }
 
 .overlay {
@@ -57,7 +68,7 @@
 .cross {
 	position: absolute;
 	top: 0px;
-	 right: -40px;
+	right: -40px;
 	width: 21px;
 	height: 21px;
 	background: url(../icons/cross.png);

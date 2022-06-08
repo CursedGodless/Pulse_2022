@@ -98,9 +98,9 @@
 					<div class="consultation__subtitle">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут
 					</div>
 					<form action="" class="form consultation__form">
-						<input class="form__input" name="name" required type="text" placeholder="Ваше имя">
-						<input class="form__input" name="phone" required type="number" placeholder="Ваш телефон">
-						<input class="form__input" name="email" required type="email" placeholder="Ваш E-mail">
+						<input class="form__input" name="name" type="text" placeholder="Ваше имя">
+						<input class="form__input" name="phone" type="number" placeholder="Ваш телефон">
+						<input class="form__input" name="email" type="email" placeholder="Ваш E-mail">
 						<button class="btn btn_big form__btn">заказать кОНСУЛЬТАЦИЮ</button>
 					</form>
 				</div>
@@ -687,33 +687,37 @@
 			<div class="modal__title">Просто заполните форму заявки</div>
 			<div class="modal__subtitle">и мы перезвоним вам в течении 10 минут</div>
 			<form action="" class="form modal__form">
-				<input class="form__input" name="name" required type="text" placeholder="Ваше имя">
-				<input class="form__input" name="phone" required type="number" placeholder="Ваш телефон">
-				<input class="form__input" name="email" required type="email" placeholder="Ваш E-mail">
+				<input class="form__input" name="name" type="text" placeholder="Ваше имя">
+				<input class="form__input" name="phone" type="number" placeholder="Ваш телефон">
+				<input class="form__input" name="email" type="email" placeholder="Ваш E-mail">
 				<button class="btn btn_big form__btn">заказать кОНСУЛЬТАЦИЮ</button>
 			</form>
 			<div class="modal__close"><button class="cross"></button></div>
+			<div class="modal__message">Данные не будут куда-либо отосланы, т.к. это простой лэндинг для портфолио</div>
 		</div>
 		<div class="modal" id="order">
 			<div class="modal__title">Ваш заказ:</div>
 			<div class="modal__subtitle"></div>
 			<form action="" class="form modal__form">
-				<input class="form__input" name="name" required type="text" placeholder="Ваше имя">
-				<input class="form__input" name="phone" required type="number" placeholder="Ваш телефон">
-				<input class="form__input" name="email" required type="email" placeholder="Ваш E-mail">
+				<input class="form__input" name="name" type="text" placeholder="Ваше имя">
+				<input class="form__input" name="phone" type="number" placeholder="Ваш телефон">
+				<input class="form__input" name="email" type="email" placeholder="Ваш E-mail">
 				<button class="btn btn_big form__btn">Купить</button>
 			</form>
 			<div class="modal__close"><button class="cross"></button></div>
+			<div class="modal__message">Данные не будут куда-либо отосланы, т.к. это простой лэндинг для портфолио</div>
 		</div>
 		<div class="modal" id="thanks">
 			<div class="modal__title">Спасибо за вашу заявку!</div>
 			<div class="modal__subtitle">Наш менеджер свяжется с вами в ближайшее время!</div>
 			<div class="modal__close"><button class="cross"></button></div>
+			<div class="modal__message">Данные не будут куда-либо отосланы, т.к. это простой лэндинг для портфолио</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/script.min.js"></script>
 </body>
 
