@@ -14,6 +14,7 @@
 		margin-top: 46px;
 	}
 	&__tab {
+		cursor: pointer;
 		width: 200px;
 		height: 50px;
 		transform: skewX(-30deg);
@@ -96,6 +97,9 @@
 			line-height: 22px;
 			color: $main-color;
 			text-transform: uppercase;
+			&:hover {
+				color: $main-color;
+			}
 			&:active {
 				color: $main-color;
 			}
